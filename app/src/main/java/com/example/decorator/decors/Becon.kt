@@ -3,6 +3,7 @@ package com.example.decorator.decors
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import com.example.decorator.*
+import com.example.decorator.pizza.Pizza
 
 class Becon(private var pizza: Pizza) : DecoratorPizza() {
 
@@ -10,8 +11,8 @@ class Becon(private var pizza: Pizza) : DecoratorPizza() {
     }
 
     private var beconPrice = 5
-    private var beconDescription = "adding Becon,"
-    val becon = BitmapFactory.decodeResource(App.instance.resources, R.drawable.p4)
+    private var beconDescription = "adding Becon, $beconPrice $ \n"
+    val becon = BitmapFactory.decodeResource(App.instance.resources, R.drawable.becon)
 
 
 
@@ -23,8 +24,8 @@ class Becon(private var pizza: Pizza) : DecoratorPizza() {
         get() = pizza.price+beconPrice
         set(value) {}
 
-    override var bitmap: Bitmap
-        get() = Utils.bitmapOverlayToCenter(pizza.bitmap, becon)
+    override var image: Bitmap
+        get() = Utils.bitmapOverlayToCenter(pizza.image, becon)
         set(value) {}
 }
 

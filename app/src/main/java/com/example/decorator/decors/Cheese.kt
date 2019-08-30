@@ -4,7 +4,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import com.example.decorator.App
 import com.example.decorator.DecoratorPizza
-import com.example.decorator.Pizza
+import com.example.decorator.pizza.Pizza
 import com.example.decorator.R
 import com.example.decorator.Utils.bitmapOverlayToCenter
 
@@ -13,9 +13,9 @@ class Cheese(private var pizza: Pizza) : DecoratorPizza() {
     override fun makePizza() {
     }
 
-    private var cheesePrice = 5
-    private var cheeseDescription = "adding Cheese,"
-    val cheese = BitmapFactory.decodeResource(App.instance.resources, R.drawable.p3)
+    private var cheesePrice = 2
+    private var cheeseDescription = "adding Cheese, $cheesePrice $ \n"
+    val cheese = BitmapFactory.decodeResource(App.instance.resources, R.drawable.cheese)
 
 
     override var description: String
@@ -26,8 +26,8 @@ class Cheese(private var pizza: Pizza) : DecoratorPizza() {
         get() = pizza.price + cheesePrice
         set(value) {}
 
-    override var bitmap: Bitmap
-        get() = bitmapOverlayToCenter(pizza.bitmap, cheese)
+    override var image: Bitmap
+        get() = bitmapOverlayToCenter(pizza.image, cheese)
         set(value) {}
 }
 
