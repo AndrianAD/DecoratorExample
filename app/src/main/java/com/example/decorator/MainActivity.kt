@@ -5,6 +5,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import com.example.decorator.decors.Becon
 import com.example.decorator.decors.Cheese
+import com.example.decorator.decors.Discount
 import com.example.decorator.decors.Mushroom
 import com.example.decorator.pizza.FatPizza
 import com.example.decorator.pizza.Pizza
@@ -14,6 +15,7 @@ import com.example.decorator.pizza.ThinPizza
 class MainActivity : AppCompatActivity() {
 
     var pizza: Pizza = FatPizza()
+    lateinit var decoratedPizza: Pizza
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,14 +23,14 @@ class MainActivity : AppCompatActivity() {
 
 
         newThinPizza.setOnClickListener {
-            pizza=ThinPizza()
+            pizza = ThinPizza()
             imageView.setImageBitmap(pizza.image)
             updateText()
 
         }
 
         newFatPizza.setOnClickListener {
-            pizza=FatPizza()
+            pizza = FatPizza()
             imageView.setImageBitmap(pizza.image)
             updateText()
 
@@ -55,15 +57,22 @@ class MainActivity : AppCompatActivity() {
 
 
         standartPizza.setOnClickListener {
-            pizza= Cheese(Becon(Mushroom(ThinPizza())))
+            pizza = Cheese(Becon(Mushroom(ThinPizza())))
             imageView.setImageBitmap(pizza.image)
             updateText()
         }
 
         clear.setOnClickListener {
-            pizza=FatPizza()
+            pizza = FatPizza()
             imageView.setImageBitmap(pizza.image)
             updateText()
+        }
+
+
+        getDiscount.setOnClickListener {
+            val discount:Pizza = Discount(pizza)
+            price.text = "Price: ${discount.price} $"
+            description.text = "Description:  ${discount.description}"
         }
 
     }

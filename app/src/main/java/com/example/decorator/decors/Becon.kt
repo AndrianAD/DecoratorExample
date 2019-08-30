@@ -10,7 +10,7 @@ class Becon(private var pizza: Pizza) : DecoratorPizza() {
     override fun makePizza() {
     }
 
-    private var beconPrice = 5
+    private var beconPrice = 9
     private var beconDescription = "adding Becon, $beconPrice $ \n"
     val becon = BitmapFactory.decodeResource(App.instance.resources, R.drawable.becon)
 

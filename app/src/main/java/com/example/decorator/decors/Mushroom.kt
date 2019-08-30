@@ -10,9 +10,11 @@ class Mushroom(private var pizza: Pizza) : DecoratorPizza() {
     override fun makePizza() {
     }
 
-    private var mushroomPrice = 3
+    private var mushroomPrice = 8
     private var mushroomDescription = "Adding mushroom, $mushroomPrice $ \n"
-    private val mushroomImage = BitmapFactory.decodeResource(App.instance.resources, R.drawable.grib)
+    private val mushroomImage =
+        BitmapFactory.decodeResource(App.instance.resources, R.drawable.grib)
+    private val collaImage = BitmapFactory.decodeResource(App.instance.resources, R.drawable.colla)
 
 
     override var description: String

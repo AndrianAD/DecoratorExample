@@ -13,7 +13,7 @@ class Cheese(private var pizza: Pizza) : DecoratorPizza() {
     override fun makePizza() {
     }
 
-    private var cheesePrice = 2
+    private var cheesePrice = 6
     private var cheeseDescription = "adding Cheese, $cheesePrice $ \n"
     val cheese = BitmapFactory.decodeResource(App.instance.resources, R.drawable.cheese)
 
