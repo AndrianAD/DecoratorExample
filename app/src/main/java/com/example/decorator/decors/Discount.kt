@@ -4,7 +4,7 @@ import android.graphics.Bitmap
 import com.example.decorator.DecoratorPizza
 import com.example.decorator.pizza.Pizza
 
-class Discount(private var pizza: Pizza) : DecoratorPizza() {
+class Discount(pizza: Pizza) : DecoratorPizza(pizza) {
 
     var discount = 5
     override var image: Bitmap

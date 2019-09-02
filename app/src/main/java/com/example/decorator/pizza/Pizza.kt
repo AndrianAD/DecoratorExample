@@ -7,5 +7,5 @@ abstract class Pizza {
     abstract var description: String
     abstract var image: Bitmap
 
-    abstract fun makePizza()
+    abstract fun make()
 }

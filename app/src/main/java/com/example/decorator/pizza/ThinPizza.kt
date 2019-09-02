@@ -24,7 +24,7 @@ class ThinPizza : Pizza() {
         set(value) {}
 
 
-    override fun makePizza() {
+    override fun make() {
 
     }
 }

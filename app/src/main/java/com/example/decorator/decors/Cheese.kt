@@ -8,10 +8,8 @@ import com.example.decorator.pizza.Pizza
 import com.example.decorator.R
 import com.example.decorator.Utils.bitmapOverlayToCenter
 
-class Cheese(private var pizza: Pizza) : DecoratorPizza() {
+class Cheese( pizza: Pizza) : DecoratorPizza(pizza) {
 
-    override fun makePizza() {
-    }
 
     private var cheesePrice = 6
     private var cheeseDescription = "adding Cheese, $cheesePrice $ \n"
@@ -29,5 +27,9 @@ class Cheese(private var pizza: Pizza) : DecoratorPizza() {
     override var image: Bitmap
         get() = bitmapOverlayToCenter(pizza.image, cheese)
         set(value) {}
+
+    override fun make() {
+    }
+
 }
 

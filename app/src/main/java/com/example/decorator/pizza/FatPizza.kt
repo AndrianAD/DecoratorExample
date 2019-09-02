@@ -6,8 +6,8 @@ import com.example.decorator.App
 import com.example.decorator.R
 
 class FatPizza : Pizza() {
-
-
+    override fun make() {
+    }
     override var image: Bitmap
         get() = BitmapFactory.decodeResource(
             App.instance.resources,
@@ -23,8 +23,4 @@ class FatPizza : Pizza() {
         get() = "Make base of Fat Pizza, $price $ \n"
         set(value) {}
 
-
-    override fun makePizza() {
-
-    }
 }

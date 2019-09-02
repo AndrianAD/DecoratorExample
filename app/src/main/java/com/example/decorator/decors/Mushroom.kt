@@ -5,16 +5,13 @@ import android.graphics.BitmapFactory
 import com.example.decorator.*
 import com.example.decorator.pizza.Pizza
 
-class Mushroom(private var pizza: Pizza) : DecoratorPizza() {
+class Mushroom(pizza: Pizza) : DecoratorPizza(pizza) {
 
-    override fun makePizza() {
-    }
 
     private var mushroomPrice = 8
     private var mushroomDescription = "Adding mushroom, $mushroomPrice $ \n"
     private val mushroomImage =
         BitmapFactory.decodeResource(App.instance.resources, R.drawable.grib)
-    private val collaImage = BitmapFactory.decodeResource(App.instance.resources, R.drawable.colla)
 
 
     override var description: String
@@ -28,5 +25,9 @@ class Mushroom(private var pizza: Pizza) : DecoratorPizza() {
     override var image: Bitmap
         get() = Utils.bitmapOverlayToCenter(pizza.image, mushroomImage)
         set(value) {}
+
+    override fun make() {
+    }
+
 }
 

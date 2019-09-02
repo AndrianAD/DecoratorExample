@@ -2,11 +2,9 @@ package com.example.decorator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.example.decorator.decors.*
 import kotlinx.android.synthetic.main.activity_main.*
-import com.example.decorator.decors.Becon
-import com.example.decorator.decors.Cheese
-import com.example.decorator.decors.Discount
-import com.example.decorator.decors.Mushroom
 import com.example.decorator.pizza.FatPizza
 import com.example.decorator.pizza.Pizza
 import com.example.decorator.pizza.ThinPizza
@@ -14,12 +12,55 @@ import com.example.decorator.pizza.ThinPizza
 
 class MainActivity : AppCompatActivity() {
 
+    var list = arrayListOf(1, 2, 4)
+
+
     var pizza: Pizza = FatPizza()
-    lateinit var decoratedPizza: Pizza
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        var decorList2 = (HappyList(list))
+        decorList2.add(1)
+        decorList2.add(2)
+        decorList2.add(3)
+        decorList2.remove(1)
+        list.remove(2)
+        list.add(100)
+        decorList2.add(200)
+
+
+
+        var decorList = SadList(HappyList(list))
+        decorList.add(1)
+        decorList.add(2)
+        decorList.add(3)
+        decorList.remove(1)
+        list.remove(2)
+        list.add(100)
+        decorList.add(200)
+
+
+
+
+
+
+
+
+        println(list.toString())
+        for (item in 0 until decorList.size) {
+            Log.d("Log", decorList[item].toString())
+        }
+
+
+        for (item in 0 until decorList.size) {
+            Log.d("Log", decorList[item].toString())
+        }
+
 
 
         newThinPizza.setOnClickListener {
@@ -43,7 +84,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         addBecon.setOnClickListener {
-            pizza = Becon(pizza)
+            pizza = Bacon(pizza)
             imageView.setImageBitmap(pizza.image)
             updateText()
         }
@@ -57,7 +98,7 @@ class MainActivity : AppCompatActivity() {
 
 
         standartPizza.setOnClickListener {
-            pizza = Cheese(Becon(Mushroom(ThinPizza())))
+            pizza = Cheese(Bacon(Mushroom(ThinPizza())))
             imageView.setImageBitmap(pizza.image)
             updateText()
         }
@@ -70,7 +111,7 @@ class MainActivity : AppCompatActivity() {
 
 
         getDiscount.setOnClickListener {
-            val discount:Pizza = Discount(pizza)
+            val discount: Pizza = Discount(pizza)
             price.text = "Price: ${discount.price} $"
             description.text = "Description:  ${discount.description}"
         }
