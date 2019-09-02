@@ -1,13 +1,17 @@
 package com.example.decorator.decors
+
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import com.example.decorator.*
+import com.example.decorator.App
+import com.example.decorator.DecoratorPizza
+import com.example.decorator.R
+import com.example.decorator.Utils
 import com.example.decorator.pizza.Pizza
 
-class Bacon(pizza: Pizza) : DecoratorPizza(pizza) {
+class Mozarella(pizza: Pizza) : DecoratorPizza(pizza) {
 
-    private var baconPrice = 9
-    private var baconDescription = "adding Bacon, $baconPrice $ \n"
+    private var baconPrice = 12
+    private var baconDescription = "adding Mozzarella, $baconPrice $ \n"
     private val bacon = BitmapFactory.decodeResource(App.instance.resources, R.drawable.becon)
 
 

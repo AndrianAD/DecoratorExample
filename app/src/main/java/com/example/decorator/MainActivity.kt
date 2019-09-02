@@ -23,43 +23,31 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//
+//        val happyList = (HappyList(list))
+//        happyList.add(1)
+//        happyList.add(2)
+//        happyList.add(3)
+//
+//        val decorList = SadList(HappyList(list))
+//        decorList.add(1)
+//        decorList.add(2)
+//        decorList.add(3)
+//        decorList.remove(1)
+//        decorList.remove(3)
+//        decorList.add(200)
+//
+////        println(list.toString())
+////        for (item in 0 until decorList.size) {
+////            Log.d("Log", decorList[item].toString())
+////        }
+////
+////
+////        for (item in 0 until decorList.size) {
+////            Log.d("Log", decorList[item].toString())
+////        }
+//
 
-        var decorList2 = (HappyList(list))
-        decorList2.add(1)
-        decorList2.add(2)
-        decorList2.add(3)
-        decorList2.remove(1)
-        list.remove(2)
-        list.add(100)
-        decorList2.add(200)
-
-
-
-        var decorList = SadList(HappyList(list))
-        decorList.add(1)
-        decorList.add(2)
-        decorList.add(3)
-        decorList.remove(1)
-        list.remove(2)
-        list.add(100)
-        decorList.add(200)
-
-
-
-
-
-
-
-
-        println(list.toString())
-        for (item in 0 until decorList.size) {
-            Log.d("Log", decorList[item].toString())
-        }
-
-
-        for (item in 0 until decorList.size) {
-            Log.d("Log", decorList[item].toString())
-        }
 
 
 
@@ -98,7 +86,7 @@ class MainActivity : AppCompatActivity() {
 
 
         standartPizza.setOnClickListener {
-            pizza = Cheese(Bacon(Mushroom(ThinPizza())))
+            pizza = Mozarella(Cheese(Bacon(Mushroom(ThinPizza()))))
             imageView.setImageBitmap(pizza.image)
             updateText()
         }

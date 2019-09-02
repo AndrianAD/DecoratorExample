@@ -9,4 +9,4 @@ class SadList(private val list: MutableList<Int>) : MutableList<Int>  by list{
         return list.remove(element)
     }
 
-}
+                                                                                                                            }
