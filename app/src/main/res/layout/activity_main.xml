@@ -17,52 +17,33 @@
 
     <Button
         android:id="@+id/newThinPizza"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="64dp"
-        android:text="Thin Pizza"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        style="@style/bt_size"
+        android:text="@string/thin_pizza"
+        app:layout_constraintBottom_toTopOf="@+id/standartPizza"
+        app:layout_constraintLeft_toLeftOf="@+id/standartPizza" />
 
     <Button
         android:id="@+id/addCheeze"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginBottom="16dp"
-        android:text="add Cheeze"
+        style="@style/bt_size"
+        android:layout_margin="10dp"
+        android:text="@string/add_cheese"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/newThinPizza" />
+        app:layout_constraintRight_toLeftOf="@+id/clear" />
 
     <Button
         android:id="@+id/addBecon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="36dp"
-        android:text="add becon"
-        app:layout_constraintBottom_toTopOf="@+id/clear"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/standartPizza" />
+        style="@style/bt_size"
+        android:text="@string/add_beacon"
+        app:layout_constraintBottom_toTopOf="@+id/addCheeze"
+        app:layout_constraintEnd_toEndOf="@+id/addCheeze"
+        app:layout_constraintLeft_toLeftOf="@+id/addCheeze" />
 
     <Button
         android:id="@+id/addMushroom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="276dp"
-        android:layout_marginLeft="276dp"
-        android:layout_marginEnd="275dp"
-        android:layout_marginRight="275dp"
-        android:layout_marginBottom="4dp"
-        android:text="add Mushroom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/addCheeze" />
+        style="@style/bt_size"
+        android:text="@string/add_mushroom"
+        app:layout_constraintBottom_toTopOf="@+id/addBecon"
+        app:layout_constraintStart_toStartOf="@+id/addBecon" />
 
     <TextView
         android:id="@+id/price"
@@ -71,7 +52,7 @@
         android:layout_marginStart="23dp"
         android:layout_marginLeft="23dp"
         android:layout_marginTop="51dp"
-        android:text="Price: "
+        android:text="@string/price"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -85,7 +66,7 @@
         android:layout_marginStart="23dp"
         android:layout_marginLeft="23dp"
         android:layout_marginTop="167dp"
-        android:text="Description: "
+        android:text="@string/description"
         android:textColor="@color/colorAccent"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -94,36 +75,27 @@
 
     <Button
         android:id="@+id/standartPizza"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="100dp"
-        android:text="Standart Pizza"
+        style="@style/bt_size"
+        android:layout_margin="10dp"
+        android:text="@string/standard_pizza"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/addMushroom" />
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
         android:id="@+id/clear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
-        android:text="Clear"
+        android:layout_margin="10dp"
+        android:text="@string/clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/newFatPizza"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="4dp"
-        android:text="fat Pizza"
+        android:text="@string/fat_pizza"
         app:layout_constraintBottom_toTopOf="@+id/newThinPizza"
-        app:layout_constraintEnd_toEndOf="@+id/newThinPizza" />
+        app:layout_constraintLeft_toLeftOf="@+id/newThinPizza"
+        style="@style/bt_size" />
 
     <Button
         android:id="@+id/getDiscount"
@@ -132,8 +104,7 @@
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:layout_marginBottom="484dp"
-        android:text="getDiscount5$"
-        app:layout_constraintBottom_toTopOf="@+id/standartPizza"
+        android:text="@string/getdiscount5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.732"
         app:layout_constraintStart_toEndOf="@+id/price"

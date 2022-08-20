@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Decorator</string>
+    <string name="thin_pizza">Thin Pizza</string>
+    <string name="add_cheese">add Cheese</string>
+    <string name="add_beacon">add beacon</string>
+    <string name="add_mushroom">add Mushroom</string>
+    <string name="price">Price:</string>
+    <string name="description">Description:</string>
+    <string name="standard_pizza">Standard Pizza</string>
+    <string name="clear">Clear</string>
+    <string name="fat_pizza">fat Pizza</string>
+    <string name="getdiscount5">getDiscount5$</string>
 </resources>
