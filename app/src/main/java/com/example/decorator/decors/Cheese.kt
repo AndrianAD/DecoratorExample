@@ -13,7 +13,7 @@ class Cheese( pizza: Pizza) : DecoratorPizza(pizza) {
 
     private var cheesePrice = 6
     private var cheeseDescription = "adding Cheese, $cheesePrice $ \n"
-    val cheese = BitmapFactory.decodeResource(App.instance.resources, R.drawable.cheese)
+    private val cheese = BitmapFactory.decodeResource(App.instance.resources, R.drawable.cheese)
 
 
     override var description: String

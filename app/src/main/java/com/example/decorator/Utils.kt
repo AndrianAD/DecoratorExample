@@ -20,34 +20,5 @@ object Utils{
         canvas.drawBitmap(overlayBitmap, marginLeft, marginTop, null)
         return finalBitmap
     }
-
 }
-
-
-fun funk1( x:Int ) :Int  {
-    return x+1
-}
-
-fun funk2( x:Int ) :Int  {
-    return x+1
-}
-
-fun funk3( x:Int ) :Int  {
-    return x+1
-}
-
-fun funk4( x:Int ) :Int  {
-    return x+1
-}
-
-fun funk5( x:Int ) :Int  {
-    return x+1
-}
-
-fun funk6( x:Int ) :Int  {
-    return x+1
-}
-
-
-var result = (funk1(funk2(funk3(funk4(funk5(funk6(1)))))))
 

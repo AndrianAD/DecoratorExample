@@ -10,7 +10,6 @@ class Bacon(pizza: Pizza) : DecoratorPizza(pizza) {
     private var baconDescription = "adding Bacon, $baconPrice $ \n"
     private val bacon = BitmapFactory.decodeResource(App.instance.resources, R.drawable.becon)
 
-
     override var description: String
         get() = pizza.description + baconDescription
         set(value) {}
